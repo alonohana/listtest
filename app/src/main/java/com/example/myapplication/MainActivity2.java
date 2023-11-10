@@ -30,10 +30,7 @@ public class MainActivity2 extends AppCompatActivity {
         cname.add(" Greenland");
         cname.add(" Guam");
         ListView l = findViewById(R.id.lv);
-        ArrayAdapter t = new ArrayAdapter(getApplicationContext(),R.layout.itmes,cname);
+        ArrayAdapter t = new ArrayAdapter(getApplicationContext(),android.R.layout.simple_list_item_1,cname);
         l.setAdapter(t);
-
-
-
     }
 }

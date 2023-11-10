@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    CountDownTimer c;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         TextView t = findViewById(R.id.textView);
 
         // Create a CountDownTimer with a 3-second countdown interval, updating every 1 second
-        new CountDownTimer(3000, 1000) {
+         c = new  CountDownTimer(3000, 1000) {
 
             // This method is called on each tick (every second)
             public void onTick(long millisUntilFinished) {
@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         // Create an Intent to switch from MainActivity to MainActivity2
         Intent intent = new Intent(MainActivity.this, MainActivity2.class);
         // Start the MainActivity2 activity
+        c.cancel();
         startActivity(intent);
     }
 }

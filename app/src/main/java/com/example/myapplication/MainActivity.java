@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         TextView t = findViewById(R.id.textView);
 
         // Create a CountDownTimer with a 3-second countdown interval, updating every 1 second
-         c = new  CountDownTimer(3000, 1000) {
+         c = new  CountDownTimer(10000, 1000) {
 
             // This method is called on each tick (every second)
             public void onTick(long millisUntilFinished) {
